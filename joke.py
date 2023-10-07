@@ -46,8 +46,8 @@ def get_joke_with_exception() -> str:
 
         return 'no joke'
 
-    except requests.exceptions.ConnectionError:
-        pass    
+    # except requests.exceptions.ConnectionError:
+    #     pass    
 
     except requests.exceptions.HTTPError:
         return 'HTTPError was raised'     
@@ -60,5 +60,5 @@ def get_joke_with_exception() -> str:
     return joke     
 
 
-if __name__ == '__main__':
-    print(get_joke())            
+# if __name__ == '__main__':
+#     print(get_joke())            

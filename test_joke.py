@@ -28,6 +28,7 @@ class TestJoke(unittest.TestCase):
             mock_requests.get.return_value = mock_response
 
             self.assertEqual(get_joke(), 'hello')
+            self.assertEqual(get_joke_with_exception(), 'hello')
 
 
     def test_get_joke_fail(self):
@@ -40,6 +41,7 @@ class TestJoke(unittest.TestCase):
             mock_requests.get.return_value = mock_response
 
             self.assertEqual(get_joke(), 'no joke')
+            self.assertEqual(get_joke_with_exception(), 'no joke')
 
 
     @patch('joke.requests')
