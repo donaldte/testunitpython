@@ -27,6 +27,12 @@ class TestCalc(unittest.TestCase):
         self.assertEqual(result2, 2.5)
 
 
+        # self.assertRaises(ValueError, app.divide, 10, 0)
+
+        with self.assertRaises(ValueError):
+            app.divide(10, 0)
+
+
 
 
 
